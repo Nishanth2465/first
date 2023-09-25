@@ -1,0 +1,24 @@
+import random
+pg=0
+while True:
+    while True:
+        a=random.randint(0,999999999)
+        try:
+            pg=int(input('guess the number'))
+            while True:
+
+                if pg==a:
+                    print('you have guessed correctly')
+                    break
+
+                elif pg>a:
+                    print('you have guessed too high')
+                    pg = int(input('try again'))
+
+                elif pg<a:
+                    print('you have guessed too low')
+                    pg = int(input('try again'))
+
+        except Exception as e:
+            print(e)
+            break
